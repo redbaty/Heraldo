@@ -39,10 +39,10 @@ namespace Heraldo
                             var objec = toFindCollection.OfType<object>().ToList()[index];
                             var sourceobjec = sourceCollection.OfType<object>().ToList()[index];
                             var nestedCompare = new HibernateCompare(objec);
-                            return nestedCompare.Compare(sourceobjec);
+                            if (!nestedCompare.Compare(sourceobjec))
+                                return false;
                         }
-
-                    if (t.ObjValues[comp] != toFindObject[comp])
+                    else if (t.ObjValues[comp] != toFindObject[comp])
                         return false;
                 }
                 else

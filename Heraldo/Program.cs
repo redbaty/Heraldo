@@ -23,14 +23,22 @@ namespace Heraldo
                     new PessoaEndereco
                     {
                         Cidade = f.Address.City(),
-                        Bairro = f.Address.State(),
+                        Bairro = f.PickRandom("Centro", "Heraldo", "Jowjow", "Ronaldo"),
                         Cep = f.Address.ZipCode(),
                         Numero = f.Address.BuildingNumber(),
                         Rua = f.Address.StreetAddress()
                     }
                 })
+                .RuleFor(i => i.Contatos, f => new List<PessoaContato>
+                {
+                    new PessoaContato
+                    {
+                        Email = f.PickRandom("jas", "ronaldo"),
+                        Nome = f.Name.FirstName()
+                    }
+                })
                 .RuleFor(i => i.TipoPessoa, f => f.PickRandom<EnumTipoPessoa>());
-            context.Pessoas.AddRange(x.Generate(10));
+            context.Pessoas.AddRange(x.Generate(1000));
             context.SaveChanges();
             var findName = context.Pessoas.First().Nome;
             var findNeighb = context.Pessoas.First().Endereco.First().Bairro;
@@ -41,7 +49,25 @@ namespace Heraldo
                 {
                     new PessoaEndereco
                     {
-                        Bairro = findNeighb
+                        Bairro = "Jowjow"
+                    }
+                }
+            }).ToList();
+
+            var result1 = context.Pessoas.FindByObject(new Pessoa
+            {
+                Endereco = new List<PessoaEndereco>
+                {
+                    new PessoaEndereco
+                    {
+                        Bairro = "Jowjow"
+                    }
+                },
+                Contatos = new List<PessoaContato>
+                {
+                    new PessoaContato
+                    {
+                        Email = "jas"
                     }
                 }
             }).ToList();
