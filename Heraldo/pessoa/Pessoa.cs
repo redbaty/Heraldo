@@ -1,7 +1,7 @@
-﻿using RaioNet.Entity.Sistema.pessoa.Enum;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using RaioNet.Entity.Sistema.pessoa.Enum;
 
 namespace RaioNet.Entity.Sistema.pessoa
 {
@@ -9,7 +9,7 @@ namespace RaioNet.Entity.Sistema.pessoa
     public class Pessoa
     {
         public int Id { get; set; }
-        
+
         [Display(Name = "Nome")]
         [StringLength(200, ErrorMessage = "Máximo {1} caracteres.")]
         [Required(ErrorMessage = "Nome Obrigatório.")]
@@ -17,7 +17,7 @@ namespace RaioNet.Entity.Sistema.pessoa
 
         [Display(Name = "CPF/CNPJ")]
         [StringLength(14, ErrorMessage = "Máximo {1} caracteres.")]
-        [Required(ErrorMessage ="CPF/CNPJ obrigatório.")]
+        [Required(ErrorMessage = "CPF/CNPJ obrigatório.")]
         public string Cpf_Cnpj { get; set; }
 
         [Display(Name = "Tipo de Pessoa")]
@@ -50,6 +50,5 @@ namespace RaioNet.Entity.Sistema.pessoa
 
         public ICollection<PessoaEndereco> Endereco { get; set; }
         public ICollection<PessoaContato> Contatos { get; set; }
-
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RaioNet.Entity.Sistema.pessoa
@@ -8,7 +7,7 @@ namespace RaioNet.Entity.Sistema.pessoa
     public class PessoaContato
     {
         public int Id { get; set; }
-        
+
         [Display(Name = "Nome")]
         [StringLength(200, ErrorMessage = "Máximo {1} caracteres.")]
         [Required(ErrorMessage = "Nome obrigatório.")]
@@ -22,7 +21,7 @@ namespace RaioNet.Entity.Sistema.pessoa
         [StringLength(200, ErrorMessage = "Máximo {1} caracteres.")]
         public string Email { get; set; }
 
-        public Int64 PessoaId { get; set; }
-        public Pessoa Pessoa { get; set; }        
+        public long PessoaId { get; set; }
+        public Pessoa Pessoa { get; set; }
     }
 }

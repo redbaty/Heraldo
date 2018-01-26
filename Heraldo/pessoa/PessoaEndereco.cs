@@ -1,5 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RaioNet.Entity.Sistema.pessoa
@@ -8,7 +7,7 @@ namespace RaioNet.Entity.Sistema.pessoa
     public class PessoaEndereco
     {
         public int Id { get; set; }
-        
+
         [Display(Name = "Endereço Principal")]
         [Required(ErrorMessage = "Endereço Principal obrigatório.")]
         public bool EnderecoPrincipal { get; set; }
@@ -42,7 +41,7 @@ namespace RaioNet.Entity.Sistema.pessoa
         [Required(ErrorMessage = "Cidade obrigatório.")]
         public string Cidade { get; set; }
 
-        public Int64 PessoaId { get; set; }
+        public long PessoaId { get; set; }
         public Pessoa Pessoa { get; set; }
     }
 }

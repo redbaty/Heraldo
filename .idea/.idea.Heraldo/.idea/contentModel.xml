@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Marcos\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_Heraldo.463472332.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Marcos\RiderProjects\Heraldo" t="IncludeFlat">
+    <e p="C:\Users\Desenv09\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_Heraldo.1486163326.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Desenv09\Documents\GitHub\Heraldo" t="IncludeFlat">
       <e p="Heraldo" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="EntityFrameworkEhMelhorQueHibernate.cs" t="Include" />
         <e p="Heraldo.csproj" t="IncludeRecursive" />
         <e p="heraldo.db" t="Include" />
         <e p="HeraldoContext.cs" t="Include" />
+        <e p="HibernateCompare.cs" t="Include" />
+        <e p="HibernateObjects.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.0" t="Include">

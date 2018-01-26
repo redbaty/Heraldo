@@ -2,8 +2,8 @@
 {
     public enum EnumTipoInscricaoEstadual
     {
-        Contribuinte    = 1,
-        Isento          = 2,  
+        Contribuinte = 1,
+        Isento = 2,
         NaoContribuinte = 3
     }
 }
